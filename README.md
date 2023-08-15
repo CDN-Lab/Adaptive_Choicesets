@@ -1,5 +1,11 @@
 # Two-visit CRDM
+**Code by:**
 
+Santiago Guardo & Ricardo Pizarro
+
+**Supervision:**
+
+Ricardo Pizarro and Silvia Lopez
 ## This script creates a new choice set centered around the trial of subjective equality in the CRDM task.
 
 - It uses data derived from the utility model and the parameter values (alpha and beta) of the subjective value equation:
@@ -10,6 +16,6 @@
 ![Screen Shot 2023-07-12 at 12.33.34 PM.png]
 
 
-Making small edit
+
 
 
