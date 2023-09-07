@@ -10,8 +10,7 @@ Ricardo Pizarro and Silvia Lopez
 
 - It uses the parameters from the utility model and creates a new choice set that symmetrically samples the **subjective value difference**. 
 
-# $SVlott = (p - \beta \cdot \frac{A}{2}) \cdot V^\alpha$
-# $SVsafe = V^\alpha$
+ $SVlott = (p - \beta \cdot \frac{A}{2}) \cdot V^\alpha and SVsafe = V^\alpha$
 
 - This will help increase CASANDRE model fit by having enogh and equal amount observations in each side of the point of subjective equality. 
 
