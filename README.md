@@ -10,7 +10,7 @@ Ricardo Pizarro and Silvia Lopez
 
 - It uses the parameters from the utility model and creates a new choice set that symmetrically samples the **subjective value difference**. 
 
- $SVlott = (p - \beta \cdot \frac{A}{2}) \cdot V^\alpha$ and $SVsafe = V^\alpha$
+ $SVlott = (p - \beta \cdot \frac{A}{2}) \cdot V^\alpha$   and   $SVsafe = V^\alpha$
 
 - This will help increase CASANDRE model fit by having enogh and equal amount observations in each side of the point of subjective equality. 
 
@@ -23,9 +23,9 @@ Ricardo Pizarro and Silvia Lopez
 
 This is how the trials are going to look like
  - For gains 
- ![Alt text](image.png)
+ ![Alt text](gains_example.png)
  - For losses
-![Alt text](image-1.png)
+![Alt text](losses_example.png)
 # How to use it
 - If you are making a calibration visit and then a tailored choiceset visit
     - Run the utility model: https://github.com/CDN-Lab/IDM_model 
