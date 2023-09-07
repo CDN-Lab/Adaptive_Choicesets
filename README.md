@@ -21,7 +21,12 @@ Ricardo Pizarro and Silvia Lopez
         - Loosing $50 for each probability level
     - We want 4 intermediate trials.
 
-# 1. How to use it
+This is how the trials are going to look like
+ - For gains 
+ ![Alt text](image.png)
+ - For losses
+![Alt text](image-1.png)
+# How to use it
 - If you are making a calibration visit and then a tailored choiceset visit
     - Run the utility model: https://github.com/CDN-Lab/IDM_model 
     - Modify the input of this cript so that it reads the parameters of the model
