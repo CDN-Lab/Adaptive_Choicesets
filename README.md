@@ -6,15 +6,28 @@ Santiago Guardo & Ricardo Pizarro
 **Supervision:**
 
 Ricardo Pizarro and Silvia Lopez
-## This script creates a new choice set centered around the trial of subjective equality in the CRDM task.
+## This script creates a new choice set given ADO o participant's input.
 
-- It uses data derived from the utility model and the parameter values (alpha and beta) of the subjective value equation:
+- It uses the parameters from the utility model and creates a new choice set that symmetrically samples the **subjective value difference**. 
 
- ![image.png](https://cdn.jamanetwork.com/ama/content_public/journal/psych/938422/m_yoi190087ea.png?Expires=1691689740&Signature=OvJ06Ayrw5fJLEycmRUj9I6GyITQwp89ZN5rVQDOm8dU1z6ZvhwNCwFV8yKnBDDEgxFqnaUQWgV7viAKHn5NpRdiVPo-Rgc8kjwYTn-0dnbudBGSoeVtaw8gTSIUiLLnWWVj2sPafVJA9NhK3bivpgCt2RLxI2UJRYUuNUmrrx1CFwyJTKYPlljeVSSEZ3Iwc9dNmvZ4p71MmTQSt8a9KcXSmZ0r0IZhQ187TDnqEFIiAN3mv9A7snMUAnhROj0Fg1p5COdoTVA9Z3RVNw8AT8QgJNSKl44244OjAauQwcnETbDdh2NPeCv4NGXYVclFTopaMriRPqUO4y-QPdDQjw__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)
+# $SVlott = (p - \beta \cdot \frac{A}{2}) \cdot V^\alpha$
+# $SVsafe = V^\alpha$
 
-- With those parameters (for now, only alpha) it finds the trial nearest to subjective equality (*i.e* the trial where it is the same to the participant to choose the certain amount v.s the lottery --> *P(choosing) aprox 0.5*
-![Screen Shot 2023-07-12 at 12.33.34 PM.png]
+- This will help increase CASANDRE model fit by having enogh and equal amount observations in each side of the point of subjective equality. 
 
+- For each probability level:
+    - We want to make 3 trials around the point of subjective equality.
+    - We want 2 extreme trials.
+        - Winning $50 for each probability level
+        - Loosing $50 for each probability level
+    - We want 4 intermediate trials.
+
+# 1. How to use it
+- If you are making a calibration visit and then a tailored choiceset visit
+    - Run the utility model: https://github.com/CDN-Lab/IDM_model 
+    - Modify the input of this cript so that it reads the parameters of the model
+    - Run the script
+- For ADO in person data, it's all going to be inbedded in psychopy. 
 
 
 
