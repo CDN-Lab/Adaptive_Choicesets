@@ -1,4 +1,4 @@
-# Two-visit CRDM
+#  Adaptive CRDM
 **Code by:**
 
 Santiago Guardo & Ricardo Pizarro
@@ -33,6 +33,30 @@ This is how the trials are going to look like
     - Run the script
 - For ADO in person data, it's all going to be inbedded in psychopy. 
 
+# Adaptive CDD
+
+From the Subjective Value formula for the Delay Discounting:
+# 
+$$
+SV_{\text{del}}= \frac{V_{\text{del}}}{1 + k\cdot d}
+$$
+        Where Vdel is the amount to be gained after a (d) delay, SV the subjective value and k the kappa parameter (discount 
+        rate).
+
+From this, we can calculate new values for a given SV. 
+$$
+V = SV \cdot (1+ K \cdot d)
+$$
+
+But, most importantly, we take advantage of the fact that, for this model, the only parameter that impacts SV is the delaye. So:
+$$
+V_{\text{now}} = SV_{\text{now}} 
+$$
+
+With this, we can play arround with $V_{\text{now}}$ and $V_{\text{del}}$ (and $SV_{\text{del}}$) to create different trials that symmetrically sample $\triangle SV$ to increase our confidence model fit. 
+
+$$
+\triangle SV = SV_{\text{del}} - SV_{\text{now}}
 
 
 
