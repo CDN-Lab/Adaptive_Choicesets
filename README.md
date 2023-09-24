@@ -8,15 +8,30 @@ Santiago Guardo & Ricardo Pizarro
 Ricardo Pizarro and Silvia Lopez
 ## 0. Introduction
 
-This Scripts creates trials for Risky Decision Making and Delayed Discounting tasks. 
+The following jupyter notebooks create trials for Risky Decision Making and Delayed Discounting tasks. They attempt to solve the problem of interindividual variability in fitting Cognitive Models to multiple individuals. 
+
+Given classical choicesets and individual differences in risk and ambiguity preferences, and delay discounting attitudes, models that predict response have an equal number of observations for the given conditions (see pictures below). This decreases model fits and it's a problem for fitting meta=cognition models that depend on condifence reports at both sides of the indifference point $\triangle SV = 0$
+
+<div style="text-align: center;">
+    <img src="Images/model_fit2.png" alt="Unequal observations" width="300" height="300">
+    <img src="Images/model_fit.png" alt="Unequal observations" width="300" height="300">
+</div>
+
+
 
 # Confidence and Risky Decision Making
 
-- It uses the parameters from the utility model and creates a new choice set that symmetrically samples the **subjective value difference**. 
+From the utility model:
+ 
 
- $SVlott = (p - \beta \cdot \frac{A}{2}) \cdot V^\alpha$   and   $SVsafe = V^\alpha$
+ $$SV_{\text{lott}} = (p - \beta \cdot \frac{A}{2}) \cdot V^\alpha$$  
 
-- This will help increase CASANDRE model fit by having enogh and equal amount observations in each side of the point of subjective equality. 
+ 
+ $$SV_{\text{safe}} = V^\alpha$$
+
+We can solve for V and create different combinations of certain v.s uncertain values for several subjective values. 
+$$V = \left(\frac{SV}{p-\frac{\beta A}{2}}\right)^\frac{1}{\alpha}$$
+
 
 - For each probability level:
     - We want to make 3 trials around the point of subjective equality.
@@ -28,11 +43,11 @@ This Scripts creates trials for Risky Decision Making and Delayed Discounting ta
 This is how the trials are going to look like
 - For gains
     
-    <img src="gains_example.png" alt="Gains Example" width="400" height="400">
+    <img src="Images/gains_example.png" alt="Gains Example" width="400" height="400">
 
 - For losses
     
-    <img src="losses_example.png" alt="Losses Example" width="400" height="400">
+    <img src="Images/losses_example.png" alt="Losses Example" width="400" height="400">
 
  
 
@@ -63,7 +78,7 @@ $$
 
 This is how the trials are going to look like: 
     
-<img src="cdd_example.png" alt="Losses Example" width="400" height="300">
+<img src="Images/cdd_example.png" alt="Delay Discounting task" width="400" height="300">
 
 
 # How to use it
