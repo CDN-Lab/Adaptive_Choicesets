@@ -1,4 +1,4 @@
-#  Adaptive CRDM
+#  Adaptive Decision Making Tasks
 **Code by:**
 
 Santiago Guardo & Ricardo Pizarro
@@ -6,7 +6,11 @@ Santiago Guardo & Ricardo Pizarro
 **Supervision:**
 
 Ricardo Pizarro and Silvia Lopez
-## This script creates a new choice set given ADO o participant's input.
+## 0. Introduction
+
+This Scripts creates trials for Risky Decision Making and Delayed Discounting tasks. 
+
+# Confidence and Risky Decision Making
 
 - It uses the parameters from the utility model and creates a new choice set that symmetrically samples the **subjective value difference**. 
 
@@ -22,21 +26,20 @@ Ricardo Pizarro and Silvia Lopez
     - We want 4 intermediate trials.
 
 This is how the trials are going to look like
- - For gains 
- ![Alt text](gains_example.png)
- - For losses
-![Alt text](losses_example.png)
-# How to use it
-- If you are making a calibration visit and then a tailored choiceset visit
-    - Run the utility model: https://github.com/CDN-Lab/IDM_model 
-    - Modify the input of this cript so that it reads the parameters of the model
-    - Run the script
-- For ADO in person data, it's all going to be inbedded in psychopy. 
+- For gains
+    
+    <img src="gains_example.png" alt="Gains Example" width="400" height="400">
 
-# Adaptive CDD
+- For losses
+    
+    <img src="losses_example.png" alt="Losses Example" width="400" height="400">
+
+ 
+
+# Delay Discounting Task
 
 From the Subjective Value formula for the Delay Discounting:
-# 
+ 
 $$
 SV_{\text{del}}= \frac{V_{\text{del}}}{1 + k\cdot d}
 $$
@@ -44,19 +47,28 @@ $$
         rate).
 
 From this, we can calculate new values for a given SV. 
+
 $$
 V = SV \cdot (1+ K \cdot d)
 $$
 
 But, most importantly, we take advantage of the fact that, for this model, the only parameter that impacts SV is the delaye. So:
-$$
-V_{\text{now}} = SV_{\text{now}} 
-$$
+$V_{\text{now}} = SV_{\text{now}}$
 
 With this, we can play arround with $V_{\text{now}}$ and $V_{\text{del}}$ (and $SV_{\text{del}}$) to create different trials that symmetrically sample $\triangle SV$ to increase our confidence model fit. 
 
 $$
 \triangle SV = SV_{\text{del}} - SV_{\text{now}}
+$$
+
+This is how the trials are going to look like: 
+    
+<img src="cdd_example.png" alt="Losses Example" width="400" height="300">
 
 
-
+# How to use it
+- If you are making a calibration visit and then a tailored choiceset visit
+    - Run the utility model: https://github.com/CDN-Lab/IDM_model 
+    - Modify the input of this script so that it reads the parameters of the model
+    - Run the script
+- For ADO in person data, it's all going to be inbedded in psychopy.
